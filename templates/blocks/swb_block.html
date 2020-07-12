@@ -1,0 +1,100 @@
+<{if $block.error}>
+
+<div style="text-align: center"><{$block.city_name}> </div> 
+
+<{else}>
+
+
+
+<table style="text-align: center; width: 98%">
+<tr>
+	<td colspan="3" style="font-weight: bold">
+
+<{if $block.details}>
+
+<a href=<{$block.details_url}> >
+
+<{/if}>
+
+	<{$block.city_name}>
+
+
+<{if $block.details}>
+
+</a>
+
+<{/if}>
+
+
+
+	</td>
+</tr>
+<tr >
+	<td style="color: red"> 
+		<{$block.maxTemp1}> 
+	</td>
+	<td style="color: red">
+		<{$block.maxTemp2}>
+	</td>
+	<td style="color: red">
+		<{$block.maxTemp3}>
+	</td>
+</tr>
+
+<tr>
+	<td style="color: blue">
+		<{$block.minTemp1}> 
+	</td>
+	<td style="color: blue">
+		<{$block.minTemp2}>
+	</td>
+	<td style="color: blue">
+		<{$block.minTemp3}>
+	</td>
+</tr>
+
+
+<tr>
+	<td>
+		<img src=<{$block.image1}> >
+	</td>
+	<td>
+		<img src=<{$block.image2}> >
+	</td>
+	<td>
+		<img src=<{$block.image3}> >
+	</td>
+</tr>
+<tr>
+	<td>
+		<{$block.day1}> 
+	</td>
+	<td>
+		<{$block.day2}>
+	</td>
+	<td>
+		<{$block.day3}>
+	</td>
+
+</tr>
+
+<{if $block.details}>
+<tr>
+	<td colspan="3" style="font-weight: bold">
+
+
+
+	<a href=<{$block.details_url}> ><{$smarty.const._MB_SWB_DETAILS}></a>
+
+
+
+	</td>
+</tr>
+
+<{/if}>
+
+</table>
+
+
+
+<{/if}>

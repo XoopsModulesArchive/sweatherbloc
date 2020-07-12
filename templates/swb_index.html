@@ -1,0 +1,173 @@
+<{if $wCurrent.error}>
+
+<h5><{$wCurrent.city_name}> </h5> 
+
+<{else}>
+
+
+<h4><{$wCurrent.city_name}> <{$smarty.const._MD_SWB_TITLE1}> </h4><h6><{$smarty.const._MD_SWB_TITLE2}><{$wCurrent.lastUpdate}></h6>
+<br/>
+
+
+<!-- Display Current conditions-->
+
+
+<table style="border-top: 1px solid #0000FF; text-align: left; width: 98%; border-bottom: 1px solid #0000FF"">
+<tr>
+	<td rowspan="2" style="font-weight: bold;text-align: left">
+	<{$smarty.const._MD_SWB_CURRENT_CONDITIONS}>
+	</td>
+
+	<td rowspan="2" style="font-weight: bold; font-size: 18px; vertical-align:middle">
+		<{$wCurrent.temp}>
+	</td>
+
+	<td rowspan="2" style="vertical-align:middle">
+		<img  src=<{$wCurrent.icon}> >
+	</td>
+
+	<td style="color: blue"> 
+		<{$smarty.const._MD_SWB_FELLS_LIKE}>
+	</td>
+	<td style="color: blue"> 
+		<{$wCurrent.feelTemp}> 
+	</td>
+	<td style="color: blue"> 
+		<{$smarty.const._MD_SWB_WIND}>
+	</td>
+	<td style="color: blue"> 
+		<{$wCurrent.windKmh}> 
+	</td>
+	
+</tr>
+
+<tr>
+	<td style="color: blue"> 
+		<{$smarty.const._MD_SWB_HUMIDITY}>
+	</td>
+	<td style="color: blue"> 
+		<{$wCurrent.humid}> 
+	</td>
+	<td style="color: blue"> 
+		&nbsp
+	</td>	
+	<td style="color: blue"> 
+		<{$wCurrent.windMph}>
+	</td>
+	
+</tr>
+
+</table>
+
+
+
+<!-- Display Forecast -->
+
+
+<table style="text-align: center; width: 98%; border-bottom: 1px solid #0000FF"; border-top: 1px solid #0000FF;">
+<tr>
+	<td rowspan="5" style="font-weight: bold; text-align: left;">
+		<{$smarty.const._MD_SWB_FORECAST}>
+	</td>
+
+	<td style="color: red"> 
+		<{$smarty.const._MD_SWB_MAX}> <{$wForecast.maxTemp1}>
+	</td>
+	<td style="color: red">
+		<{$smarty.const._MD_SWB_MAX}> <{$wForecast.maxTemp2}>
+	</td>
+	<td style="color: red">
+		<{$smarty.const._MD_SWB_MAX}> <{$wForecast.maxTemp3}>
+	</td>
+	</td>
+	<td style="color: red">
+		<{$smarty.const._MD_SWB_MAX}> <{$wForecast.maxTemp4}>
+	</td>
+	</td>
+	<td style="color: red">
+		<{$smarty.const._MD_SWB_MAX}> <{$wForecast.maxTemp5}>
+	</td>
+
+</tr>
+
+<tr>
+	<td style="color: blue">
+		<{$smarty.const._MD_SWB_MIN}> <{$wForecast.minTemp1}>
+	</td>
+	<td style="color: blue">
+		<{$smarty.const._MD_SWB_MIN}> <{$wForecast.minTemp2}>
+	</td>
+	<td style="color: blue">
+		<{$smarty.const._MD_SWB_MIN}> <{$wForecast.minTemp3}>
+	</td>
+	<td style="color: blue">
+		<{$smarty.const._MD_SWB_MIN}> <{$wForecast.minTemp4}>
+	</td>
+	<td style="color: blue">
+		<{$smarty.const._MD_SWB_MIN}> <{$wForecast.minTemp5}>
+	</td>
+
+</tr>
+
+
+<tr>
+	<td>
+		<img src=<{$wForecast.image1}> >
+	</td>
+	<td>
+		<img src=<{$wForecast.image2}> >
+	</td>
+	<td>
+		<img src=<{$wForecast.image3}> >
+	</td>
+	<td>
+		<img src=<{$wForecast.image4}> >
+	</td>
+	<td>
+		<img src=<{$wForecast.image5}> >
+	</td>
+
+</tr>
+
+<tr>
+	<td style="color: blue; font-size: 9px">
+		<{$smarty.const._MD_SWB_RAIN_CHANCE}><{$wForecast.rainProb1}>
+	</td>
+	<td style="color: blue; font-size: 9px">
+		<{$smarty.const._MD_SWB_RAIN_CHANCE}><{$wForecast.rainProb2}>
+	</td>
+	<td style="color: blue; font-size: 9px">
+		<{$smarty.const._MD_SWB_RAIN_CHANCE}><{$wForecast.rainProb3}>
+	</td>
+	<td style="color: blue; font-size: 9px">
+		<{$smarty.const._MD_SWB_RAIN_CHANCE}><{$wForecast.rainProb4}>
+	</td>
+	<td style="color: blue; font-size: 9px">
+		<{$smarty.const._MD_SWB_RAIN_CHANCE}><{$wForecast.rainProb5}>
+	</td>
+
+</tr>
+
+<tr>
+	<td style="font-weight: bold">
+		<{$wForecast.day1}> 
+	</td>
+	<td style="font-weight: bold">
+		<{$wForecast.day2}>
+	</td>
+	<td style="font-weight: bold">
+		<{$wForecast.day3}>
+	</td>
+	<td style="font-weight: bold">
+		<{$wForecast.day4}>
+	</td>
+	<td style="font-weight: bold">
+		<{$wForecast.day5}>
+	</td>
+
+</tr>
+
+
+</table>
+
+<{/if}>
